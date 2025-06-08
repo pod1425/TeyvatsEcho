@@ -1,5 +1,8 @@
-// 1.21.1	2025-06-06T17:04:51.3361433	Item Models: teyvatecho
+// 1.21.1	2025-06-08T19:22:46.6842798	Item Models: teyvatecho
+9730aaa9a6339421e5bbe458a46af05410030971 assets/teyvatecho/models/item/anemo_splash_potion.json
 8308cf9087985dd99b1716869b264683bd6b6933 assets/teyvatecho/models/item/cryo_splash_potion.json
+c87760d3d366f063de8030158bee53021e86662a assets/teyvatecho/models/item/dendro_splash_potion.json
 c52c3966f790a9511ba0825d15bfe3444b430422 assets/teyvatecho/models/item/electro_splash_potion.json
+bdf951286d11eb92b3b705bc8130d3b153273dc5 assets/teyvatecho/models/item/geo_splash_potion.json
 ac275094ac8f846c4d4bb3ad3c0bf418761e0d70 assets/teyvatecho/models/item/hydro_splash_potion.json
 b10da2f6e2e14dad9c8bdc70df8af85b124fff6b assets/teyvatecho/models/item/pyro_splash_potion.json

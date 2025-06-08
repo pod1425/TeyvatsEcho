@@ -3,10 +3,26 @@ package net.pod.teyvat.elements.reaction;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import net.pod.teyvat.elements.basic.ElementalEffect;
 
-public class Quicken extends MobEffect {
+public class Quicken extends ElementalEffect {
     public Quicken(MobEffectCategory category, int color) {
         super(category, color);
+    }
+
+    @Override
+    public void initReactionProvider() {
+
+    }
+
+    @Override
+    public boolean isReaction() {
+        return true;
+    }
+
+    @Override
+    public boolean isReactive() {
+        return true;
     }
 
     @Override

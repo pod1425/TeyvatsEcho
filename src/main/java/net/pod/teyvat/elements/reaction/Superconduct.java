@@ -3,10 +3,26 @@ package net.pod.teyvat.elements.reaction;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import net.pod.teyvat.elements.basic.ElementalEffect;
 
-public class Superconduct extends MobEffect {
+public class Superconduct extends ElementalEffect {
     public Superconduct(MobEffectCategory category, int color) {
         super(category, color);
+    }
+
+    @Override
+    public void initReactionProvider() {
+
+    }
+
+    @Override
+    public boolean isReaction() {
+        return true;
+    }
+
+    @Override
+    public boolean isReactive() {
+        return false;
     }
 
     @Override

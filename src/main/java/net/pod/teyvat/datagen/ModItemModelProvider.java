@@ -18,6 +18,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.HYDRO_SPLASH_POTION.get());
         basicItem(ModItems.ELECTRO_SPLASH_POTION.get());
         basicItem(ModItems.CRYO_SPLASH_POTION.get());
+        basicItem(ModItems.ANEMO_SPLASH_POTION.get());
+        basicItem(ModItems.DENDRO_SPLASH_POTION.get());
+        basicItem(ModItems.GEO_SPLASH_POTION.get());
 
     }
 }

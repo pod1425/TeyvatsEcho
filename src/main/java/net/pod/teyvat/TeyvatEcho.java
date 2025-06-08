@@ -1,5 +1,8 @@
 package net.pod.teyvat;
 
+import net.pod.teyvat.elements.ElementalHelper;
+import net.pod.teyvat.event.ModCombatEvents;
+import net.pod.teyvat.event.ModEvents;
 import net.pod.teyvat.registries.ModAttachments;
 import net.pod.teyvat.registries.ModEffects;
 import net.pod.teyvat.registries.ModItems;
@@ -33,6 +36,8 @@ public class TeyvatEcho
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
         ModAttachments.register(modEventBus);
+        NeoForge.EVENT_BUS.register(new ModCombatEvents());
+        NeoForge.EVENT_BUS.register(new ModEvents());
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -40,7 +45,7 @@ public class TeyvatEcho
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("HELLO FROM COMMON SETUP");
-
+        ElementalHelper.init();
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)

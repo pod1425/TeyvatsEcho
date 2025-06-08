@@ -1,21 +1,33 @@
 package net.pod.teyvat.elements;
 
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 public class ReactionContext {
-    private LivingEntity target;
-    private LivingEntity driver;
+    private LivingIncomingDamageEvent triggerEvent;
 
-    public ReactionContext(LivingEntity target, LivingEntity driver) {
-        this.target = target;
-        this.driver = driver;
+    public ReactionContext(LivingIncomingDamageEvent triggerEvent) {
+        this.triggerEvent = triggerEvent;
     }
 
-    public LivingEntity getTarget() {
-        return target;
+    public Entity getTarget() {
+        return triggerEvent.getEntity();
     }
 
-    public LivingEntity getDriver() {
-        return driver;
+    public Entity getDriver() {
+        return triggerEvent.getSource().getEntity();
+    }
+
+    public float getDamage() {
+        return triggerEvent.getAmount();
+    }
+
+    public void setDamage(float newDamage) {
+        triggerEvent.setAmount(newDamage);
+    }
+
+    public LivingIncomingDamageEvent getTriggerEvent() {
+        return triggerEvent;
     }
 }

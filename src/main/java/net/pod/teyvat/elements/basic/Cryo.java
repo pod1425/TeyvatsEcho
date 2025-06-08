@@ -3,10 +3,26 @@ package net.pod.teyvat.elements.basic;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import net.pod.teyvat.elements.ReactionProvider;
 
-public class Cryo extends MobEffect {
+public class Cryo extends ElementalEffect {
     public Cryo(MobEffectCategory category, int color) {
         super(category, color);
+    }
+
+    @Override
+    public void initReactionProvider() {
+
+    }
+
+    @Override
+    public boolean isReaction() {
+        return false;
+    }
+
+    @Override
+    public boolean isReactive() {
+        return true;
     }
 
     @Override
